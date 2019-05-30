@@ -1,11 +1,19 @@
 <script>
-	let name = 'world';
+  import Splash from './components/Splash.svelte';
+  import Header from './components/Header.svelte';
+
+	let loading = true;
+
+  setTimeout(() => {
+    loading = false;
+  }, 5000);
 </script>
 
-<style>
-  h1 {
-    color: #f00;
-  }
-</style>
 
-<h1>Hello {name}!</h1>
+{#if loading}
+  <Splash />
+{:else}
+  <div>
+    <Header />
+  </div>
+{/if}

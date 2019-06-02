@@ -3,6 +3,9 @@
   import Star from './icon/Star.svelte';
   import User from './icon/User.svelte';
   import Document from './icon/Document.svelte';
+
+  import { pageActive } from '../stores.js';
+  import { goToPage } from '../utils';
 </script>
 
 <style>
@@ -24,7 +27,11 @@
 
   .links .link {
     fill: #222;
+    margin: 0;
+    border: 0;
+    outline: 0;
     display: flex;
+    background: none;
     padding: 7px 15px;
   }
 </style>
@@ -32,24 +39,24 @@
 <div class="container">
   <ul class="links">
     <li>
-      <a class="link" href="#">
-        <Home active={true} />
-      </a>
+      <button class="link" data-link="tournament" on:click={goToPage}>
+        <Home active={$pageActive === 'tournament' ? true : false} />
+      </button>
     </li>
     <li>
-      <a class="link" href="#">
-        <Star active={false} />
-      </a>
+      <button class="link" data-link="gallery" on:click={goToPage}>
+        <Star active={$pageActive === 'gallery' ? true : false} />
+      </button>
     </li>
     <li>
-      <a class="link" href="#">
-        <User active={false} />
-      </a>
+      <button class="link" data-link="players" on:click={goToPage}>
+        <User active={$pageActive === 'players' ? true : false} />
+      </button>
     </li>
     <li>
-      <a class="link" href="#">
-        <Document active={false} />
-      </a>
+      <button class="link" data-link="rules" on:click={goToPage}>
+        <Document active={$pageActive === 'rules' ? true : false} />
+      </button>
     </li>
   </ul>
 </div>

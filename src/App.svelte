@@ -1,10 +1,8 @@
 <script>
+  import Routes from './Routes.svelte';
   import Loading from './components/Loading.svelte';
   import Header from './components/Header.svelte';
   import Nav from './components/Nav.svelte';
-
-	let loading = true;
-
 </script>
 
 <style>
@@ -41,13 +39,7 @@
   <Header />
 
   <div class="main">
-    {#if loading}
-      <div class="loading">
-        <Loading />
-      </div>
-    {:else}
-      <div></div>
-    {/if}
+    <Routes />
   </div>
 
   <Nav />

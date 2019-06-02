@@ -1,5 +1,11 @@
 <style>
   .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image {
     display: flex;
     width: 120px;
     height: 120px;
@@ -7,13 +13,13 @@
     transform: translateZ(1px);
   }
 
-  .image {
+  .logo {
     width: 100%;
     height: 100%;
-    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: anim-logo 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
   }
 
-  @keyframes lds-circle {
+  @keyframes anim-logo {
     0%, 100% {
       animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
     }
@@ -31,5 +37,7 @@
 </style>
 
 <div class="container">
-  <img class="image" src="../images/favicon-image.png" alt="Loading">
+  <div class="image">
+    <img class="logo" src="../images/favicon-image.png" alt="Carrengando...">
+  </div>
 </div>

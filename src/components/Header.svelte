@@ -1,5 +1,7 @@
 <script>
   import Help from './icon/Help.svelte';
+
+  import { goToPage } from '../utils';
 </script>
 
 <style>
@@ -31,10 +33,14 @@
 
   .link-about {
     fill: #333;
+    margin: 0;
+    border: 0;
+    outline: 0;
     top: 0px;
     right: 15px;
     height: 45px;
     display: flex;
+    background: none;
     position: absolute;
     align-items: center;
   }
@@ -46,7 +52,7 @@
     <img class="logo" src="images/logo/logo-small.png" alt="Poker Brothers">
   </h1>
 
-  <a href="#" class="link-about">
+  <button class="link-about" data-link="about" on:click={goToPage}>
     <Help />
-  </a>
+  </button>
 </div>

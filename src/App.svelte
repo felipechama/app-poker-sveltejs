@@ -1,19 +1,54 @@
 <script>
-  import Splash from './components/Splash.svelte';
+  import Loading from './components/Loading.svelte';
   import Header from './components/Header.svelte';
+  import Nav from './components/Nav.svelte';
 
 	let loading = true;
 
-  setTimeout(() => {
-    loading = false;
-  }, 5000);
 </script>
 
+<style>
+  :global(html) {
+    height: 100%;
+  }
 
-{#if loading}
-  <Splash />
-{:else}
-  <div>
-    <Header />
+  :global(body) {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 15px;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .main .loading {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<div class="container">
+  <Header />
+
+  <div class="main">
+    {#if loading}
+      <div class="loading">
+        <Loading />
+      </div>
+    {:else}
+      <div></div>
+    {/if}
   </div>
-{/if}
+
+  <Nav />
+</div>

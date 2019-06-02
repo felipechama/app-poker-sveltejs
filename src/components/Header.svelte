@@ -1,7 +1,52 @@
+<script>
+  import Help from './icon/Help.svelte';
+</script>
+
 <style>
+  .container {
+    height: 45px;
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+  }
+
   .title {
-    font-weight: bold;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+  }
+
+  .title:active .logo {
+    opacity: 0.3;
+  }
+
+  .title .logo {
+    border: 0px;
+    height: 23px;
+  }
+
+  .link-about {
+    fill: #333;
+    top: 0px;
+    right: 15px;
+    height: 45px;
+    display: flex;
+    position: absolute;
+    align-items: center;
   }
 </style>
 
-<h1 class="title">Header component :)</h1>
+<div class="container">
+  <h1 class="title">
+    Poker Brothers
+    <img class="logo" src="images/logo/logo-small.png" alt="Poker Brothers">
+  </h1>
+
+  <a href="#" class="link-about">
+    <Help />
+  </a>
+</div>

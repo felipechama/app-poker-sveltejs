@@ -2,24 +2,23 @@
   import { onMount } from 'svelte';
 
   import Loading from '../components/Loading.svelte';
+  import { fetchApi } from '../utils';
 
   let loading = true;
   let title = '';
   let content = '';
 
   onMount(async () => {
-    const res = await fetch('http://localhost:3000/api/page/regras');
-    const data = await res.json();
+    const res = await fetchApi('/page/regras');
 
-    title = data.title;
-    content = data.content;
+    title = res.title;
+    content = res.content;
     loading = false;
   });
 </script>
 
 <style>
   .title {
-    font-size: 24px;
     font-weight: bold;
   }
 

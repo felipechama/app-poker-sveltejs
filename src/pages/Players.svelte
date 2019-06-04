@@ -36,6 +36,7 @@
           <Player
             name={player.name}
             slug={player.slug}
+            championships={player.championships}
           />
         </li>
       {/each}

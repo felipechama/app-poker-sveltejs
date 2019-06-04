@@ -16,7 +16,7 @@ export const fetchApi = async (path) => {
   const res = await fetch(`http://localhost:3000/api${path}`);
 
   if(res.status === 404) {
-    return null;
+    return [];
   }
 
   return await res.json();

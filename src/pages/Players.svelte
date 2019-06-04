@@ -8,9 +8,21 @@
   let loading = true;
   let players = [];
 
+  const sortByChampion = (a, b) => {
+    if(a.championships.length > b.championships.length) {
+      return -1;
+    }
+
+    if(a.championships.length < b.championships.length) {
+      return 1;
+    }
+
+    return 0;
+  }
+
   onMount(async () => {
     const res = await fetchApi('/players');
-    players = res;
+    players = res.sort(sortByChampion);
     loading = false;
   });
 </script>

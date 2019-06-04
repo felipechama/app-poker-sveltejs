@@ -1,12 +1,9 @@
 <script>
   export let active = false;
-  export const size = {
-    width: 24,
-    height: 24,
-  }
+  export let size = 24;
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" width={size.width} height={size.height} viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
   {#if active}
     <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/><path d="M0 0h24v24H0z" fill="none"/>
   {:else}

@@ -1,5 +1,6 @@
 <script>
   import Loading from '../components/Loading.svelte';
+  import Title from '../components/Title.svelte';
 </script>
 
 <style>
@@ -8,12 +9,8 @@
     position: relative;
   }
 
-  .title {
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-
   p {
+    margin-top: 15px;
     margin-bottom: 10px;
   }
 
@@ -35,9 +32,7 @@
 </style>
 
 <div>
-  <h2 class="title">
-    Sobre
-  </h2>
+  <Title text="Sobre" />
 
   <p>
     Desenvolvido por <a href="http://felipechama.com" target="_blank">Felipe Chama</a>

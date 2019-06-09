@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
 
   import Loading from '../components/Loading.svelte';
+  import Title from '../components/Title.svelte';
   import Player from '../components/Player.svelte';
   import { fetchApi } from '../utils';
 
@@ -28,9 +29,8 @@
 </script>
 
 <style>
-  .title {
-    font-weight: bold;
-    margin-bottom: 15px;
+  .list-players {
+    margin-top: 15px;
   }
 </style>
 
@@ -38,9 +38,7 @@
   <Loading />
 {:else}
   <div>
-    <h2 class="title">
-      Jogadores
-    </h2>
+    <Title text="Jogadores" />
 
     <ul class="list-players">
       {#each players as player}

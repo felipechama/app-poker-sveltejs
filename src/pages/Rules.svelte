@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
 
   import Loading from '../components/Loading.svelte';
+  import Title from '../components/Title.svelte';
   import { fetchApi } from '../utils';
 
   let loading = true;
@@ -18,10 +19,6 @@
 </script>
 
 <style>
-  .title {
-    font-weight: bold;
-  }
-
   .content {
     margin-top: 25px;
     font-size: 16px;
@@ -41,9 +38,7 @@
   <Loading />
 {:else}
   <div>
-    <h2 class="title">
-      {title}
-    </h2>
+    <Title text={title} />
 
     <div class="content">
       {@html content}

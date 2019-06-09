@@ -12,6 +12,6 @@
   <Loading />
 {:else}
   <div>
-    gallery page
+    all tournaments page
   </div>
 {/if}

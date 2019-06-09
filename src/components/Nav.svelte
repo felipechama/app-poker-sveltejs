@@ -1,6 +1,6 @@
 <script>
   import Home from './icon/Home.svelte';
-  import Star from './icon/Star.svelte';
+  import List from './icon/List.svelte';
   import User from './icon/User.svelte';
   import Document from './icon/Document.svelte';
 
@@ -36,7 +36,7 @@
   }
 </style>
 
-<div class="container">
+<nav class="container">
   <ul class="links">
     <li>
       <button class="link" data-link="tournament" on:click={goToPage}>
@@ -44,8 +44,8 @@
       </button>
     </li>
     <li>
-      <button class="link" data-link="gallery" on:click={goToPage}>
-        <Star active={$pageActive === 'gallery' ? true : false} />
+      <button class="link" data-link="tournaments" on:click={goToPage}>
+        <List active={$pageActive === 'tournaments' ? true : false} />
       </button>
     </li>
     <li>
@@ -59,4 +59,4 @@
       </button>
     </li>
   </ul>
-</div>
+</nav>

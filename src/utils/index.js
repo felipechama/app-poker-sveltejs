@@ -21,3 +21,20 @@ export const fetchApi = async (path) => {
 
   return await res.json();
 }
+
+export const currencyFormatBr = (number) => (
+  number
+    .toFixed(2)
+    .replace('.', ',')
+    .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+)
+
+export const formatDateToBr = (date, short) => {
+  const longDate = date.substr(0, 10).split('-').reverse().join('/');
+
+  if(short) {
+    return longDate.substr(0, 5);
+  }
+
+  return longDate;
+}

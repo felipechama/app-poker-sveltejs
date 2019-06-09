@@ -28,6 +28,7 @@
 
   .content :global(h3) {
     float: left;
+    color: #3897f0;
     font-size: 20px;
     font-weight: bold;
     margin-right: 5px;

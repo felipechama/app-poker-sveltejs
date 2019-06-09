@@ -1,13 +1,10 @@
 <script>
   import Star from './icon/Star.svelte';
+  import AvatarPlayer from './AvatarPlayer.svelte';
 
   export let name;
   export let slug;
   export let championships = [];
-
-  const onErrorImage = (e) => {
-    e.target.src = '../images/players/default.jpg';
-  }
 
   const toggleInfoPlayer = (e) => {
     const container = e.target.closest('.container');
@@ -36,19 +33,6 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .image {
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 1px solid #ddd;
-  }
-
-  .image img {
-    width: 100%;
-    height: auto;
   }
 
   .info {
@@ -113,7 +97,10 @@
 <div class="container">
   <div class="card">
     <div class="image">
-      <img src="../images/players/{slug}.jpg" alt="{name}" on:error={onErrorImage}>
+      <AvatarPlayer
+        name={name}
+        slug={slug}
+      />
     </div>
 
     <div class="info">

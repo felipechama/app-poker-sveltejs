@@ -8,6 +8,7 @@
 <style>
   .container {
     font-size: 17px;
+    padding: 0 15px;
   }
 
   h3 {

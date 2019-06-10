@@ -40,7 +40,9 @@
 </script>
 
 <style>
-
+  .title {
+    padding: 0 15px;
+  }
 </style>
 
 {#if loading}
@@ -50,8 +52,10 @@
     <p>{errorMessage}</p>
   </div>
 {:else}
-  <div class="container">
-    <Title text={`Torneio: ${tournament.name}`} />
+  <div>
+    <div class="title">
+      <Title text={`Torneio: ${tournament.name}`} />
+    </div>
 
     <Tournament
       score={tournament.score}

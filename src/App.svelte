@@ -22,8 +22,8 @@
   }
 
   .main {
-    padding: 15px;
     flex: 1 1 auto;
+    padding: 15px 0;
     overflow-y: auto;
     position: relative;
   }

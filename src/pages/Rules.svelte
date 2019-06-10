@@ -19,9 +19,13 @@
 </script>
 
 <style>
+  .container {
+    padding: 0 15px;
+  }
+
   .content {
-    margin-top: 25px;
     font-size: 16px;
+    margin-top: 25px;
     text-align: justify;
     line-height: 1.5em;
   }
@@ -38,7 +42,7 @@
 {#if loading}
   <Loading />
 {:else}
-  <div>
+  <div class="container">
     <Title text={title} />
 
     <div class="content">

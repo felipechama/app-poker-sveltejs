@@ -24,6 +24,10 @@
 </script>
 
 <style>
+  .container {
+    padding: 0 15px;
+  }
+
   .ranking {
     font-size: 13px;
     margin-top: 15px;
@@ -53,7 +57,7 @@
   }
 </style>
 
-<div>
+<div class="container">
   <table class="ranking">
     <thead class="header">
       <tr>

@@ -4,6 +4,10 @@
 </script>
 
 <style>
+  .container {
+    padding: 0 15px;
+  }
+
   .loading {
     margin-top: 50px;
     position: relative;
@@ -31,7 +35,7 @@
   }
 </style>
 
-<div>
+<div class="container">
   <Title text="Sobre" />
 
   <p>

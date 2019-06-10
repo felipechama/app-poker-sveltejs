@@ -29,6 +29,10 @@
 </script>
 
 <style>
+  .container {
+    padding: 0 15px;
+  }
+
   .list-players {
     margin-top: 15px;
   }
@@ -37,7 +41,7 @@
 {#if loading}
   <Loading />
 {:else}
-  <div>
+  <div class="container">
     <Title text="Jogadores" />
 
     <ul class="list-players">

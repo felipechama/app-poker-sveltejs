@@ -10,9 +10,13 @@
 
 <style>
   .container {
+    z-index: 9;
+    left: 0;
+    right: 0;
+    bottom: 0;
     height: 40px;
     display: flex;
-    flex: 0 0 auto;
+    position: fixed;
     background-color: #f9f9f9;
     border-top: 1px solid #eee;
   }

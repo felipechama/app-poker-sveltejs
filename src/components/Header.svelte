@@ -6,12 +6,18 @@
 
 <style>
   .container {
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 45px;
     display: flex;
-    flex: 0 0 auto;
-    position: relative;
+    position: fixed;
     background-color: #f9f9f9;
     border-bottom: 1px solid #eee;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.1);
   }
 
   .title {

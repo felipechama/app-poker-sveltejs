@@ -45,5 +45,5 @@
     <a href="mailto:felipechama42@gmail.com" target="_blank">felipechama42@gmail.com</a>
   </p>
 
-  <img class="loading" src="../images/favicon-image.png" alt="Sobre">
+  <img class="loading" src="images/favicon-image.png" alt="Sobre">
 </div>

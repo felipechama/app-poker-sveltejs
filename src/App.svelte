@@ -6,36 +6,13 @@
 </script>
 
 <style>
-  :global(html) {
-    height: 100%;
-  }
-
-  :global(body) {
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
   .main {
-    flex: 1 1 auto;
-    padding: 15px 0;
-    overflow-y: auto;
-    position: relative;
-  }
-
-  .main .loading {
-    height: 100%;
-    display: flex;
-    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 </style>
 
-<div class="container">
+<div>
   <Header />
 
   <div class="main">

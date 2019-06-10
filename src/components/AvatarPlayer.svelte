@@ -4,6 +4,10 @@
   export let size = 50;
 
   const onErrorImage = (e) => {
+    if(e.target.src.match(/default/)) {
+      return;
+    }
+
     e.target.src = '../images/players/default.jpg';
   }
 </script>

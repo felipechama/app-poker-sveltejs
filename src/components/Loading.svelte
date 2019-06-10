@@ -38,6 +38,6 @@
 
 <div class="container">
   <div class="image">
-    <img class="logo" src="../images/favicon-image.png" alt="Carrengando...">
+    <img class="logo" src="images/favicon-image.png" alt="Carrengando...">
   </div>
 </div>

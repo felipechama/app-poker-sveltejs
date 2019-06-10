@@ -84,9 +84,9 @@
 
   .btn-close {
     border: 0;
-    outline: 0;
+    outline: none;
     color: #fff;
-    width: 28px;
+    width: auto;
     height: 25px;
     background: none;
   }

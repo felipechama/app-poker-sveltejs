@@ -49,7 +49,7 @@
     fill: #222;
     margin: 0;
     border: 0;
-    outline: 0;
+    outline: none;
     display: flex;
     background: none;
     padding: 7px 15px;

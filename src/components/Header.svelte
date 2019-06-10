@@ -35,7 +35,7 @@
     fill: #333;
     margin: 0;
     border: 0;
-    outline: 0;
+    outline: none;
     top: 0px;
     right: 15px;
     height: 45px;

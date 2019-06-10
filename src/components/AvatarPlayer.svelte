@@ -32,6 +32,6 @@
   <img
     alt="{name}"
     on:error={onErrorImage}
-    src="../images/players/{slug}.jpg"
+    src="images/players/{slug}.jpg"
   />
 </div>

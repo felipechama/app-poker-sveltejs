@@ -13,7 +13,7 @@ export const goToPage = (e) => {
 }
 
 export const fetchApi = async (path) => {
-  const res = await fetch(`http://localhost:3000/api${path}`);
+  const res = await fetch(`https://poker-brothers.herokuapp.com/api${path}`);
 
   if(res.status === 404) {
     return [];
